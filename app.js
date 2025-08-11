@@ -19,6 +19,9 @@ function haversineDistance(lat1, lon1, lat2, lon2) {
 }
 
 // --- POST /addSchool ---
+app.get('/', (req, res) => {
+  res.send('School API is running 🚀');
+});
 app.post(
     '/addSchool',
     [
@@ -131,3 +134,4 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
+
